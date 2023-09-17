@@ -3,6 +3,7 @@
 import 'package:first_project/helpers/colors.dart';
 import 'package:first_project/pages/bon_tab.dart';
 import 'package:first_project/pages/main_tab.dart';
+import 'package:first_project/pages/qr_code_tab.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -55,6 +56,8 @@ class _HomePageState extends State<HomePage> {
         return MainTab();
       case 1:
         return BonTab();
+      case 2:
+        return QRCodeTab();
       default:
         return Container();
     }

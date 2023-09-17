@@ -36,15 +36,15 @@ class _BonTabState extends State<BonTab> {
           },
           {
             'icon': Icons.access_time_filled_rounded,
-            'label': 'Մարկեթ',
+            'label': 'Խանութ',
           },
           {
             'icon': Icons.wrong_location_rounded,
-            'label': 'Մարկեթ',
+            'label': 'Սուպերմարկեթ',
           },
           {
             'icon': Icons.water_damage_rounded,
-            'label': 'Մարկեթ',
+            'label': 'Շոփ',
           },
         ]),
       ),
@@ -123,7 +123,7 @@ class _BonTabState extends State<BonTab> {
                 color: AppColors.appOrange,
               ),
               label: Text(
-                data[0]['label'],
+                data[index]['label'],
                 style: TextStyle(color: AppColors.appBlack),
               ),
             );
@@ -142,7 +142,7 @@ class _BonTabState extends State<BonTab> {
     return ListView.separated(
         padding: const EdgeInsets.all(10),
         itemBuilder: (context, index) {
-          return itemTile();
+          return itemTile(index);
         },
         separatorBuilder: (context, index) {
           return const SizedBox(
@@ -152,7 +152,7 @@ class _BonTabState extends State<BonTab> {
         itemCount: 20);
   }
 
-  Widget itemTile() {
+  Widget itemTile(int index) {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15),
@@ -205,7 +205,7 @@ class _BonTabState extends State<BonTab> {
           ),
           Expanded(
             flex: 5,
-            child: Container(
+            child: SizedBox(
               height: 200,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
