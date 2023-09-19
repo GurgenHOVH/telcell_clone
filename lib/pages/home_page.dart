@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:first_project/helpers/colors.dart';
+import 'package:first_project/pages/banking_page.dart';
 import 'package:first_project/pages/bon_tab.dart';
 import 'package:first_project/pages/main_tab.dart';
 import 'package:first_project/pages/qr_code_tab.dart';
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
       case 2:
         return QRCodeTab();
       default:
-        return Container();
+        return BankingTab();
     }
   }
 }

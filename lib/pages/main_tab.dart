@@ -166,12 +166,7 @@ class _MainTabState extends State<MainTab> {
               imageURL:
                   'https://freepngimg.com/thumb/car/3-2-car-free-download-png-thumb.png',
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const TransportPage(),
-                  ),
-                );
+                Navigator.pushNamed(context, 'transport');
               }),
           serviceItem(
               title: 'Իվենթներ',
